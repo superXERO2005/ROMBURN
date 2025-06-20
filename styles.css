@@ -1,0 +1,605 @@
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('shrift/PressStart2P-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('shrift/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display2';
+    src: url('shrift/SF-Pro-Display-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-color: #000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 0;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-family: 'PressStart2P';
+}
+
+.header__menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.header__menu a:hover {
+    color: #0DFF00;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url('images/46e5d0b7141e07b9f4c2fe93c6af8b9a412ee200.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.hero__content {
+    text-align: center;
+    color: #fff;
+    width: 906px;
+    height: 563px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 81px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid rgba(105, 97, 97, 0.367);
+}
+
+.hero__title {
+    font-family: 'PressStart2P';
+    font-size: 96px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #0DFF00;
+}
+
+.hero__text {
+    font-size: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.hero__button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero__button img {
+    width: 100px;
+    height: auto;
+    padding-top: 127px;
+}
+
+.hero__button:hover {
+    transform: scale(1.05);
+}
+
+.games {
+    padding: 178px 0 100px;
+    background: #000;
+}
+
+.games__title {
+    font-family: 'SF Pro Display';
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    scroll-margin-top: 300px;
+}
+
+.games__grid {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.games__item {
+    text-align: center;
+}
+
+.games__image {
+    object-fit: cover;
+    margin: 50px 20px 20px 20px;
+}
+
+.games__text {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 20px;
+}
+
+.new-block {
+    padding-top: 60px;
+    padding-bottom: 81px;
+    background: #000;
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.new-block__title {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.new-block__address {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    margin: 26px 26px 26px 45px;
+}
+
+.new-block__gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.text-block {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/baee0 1.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text-block__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 90px 120px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 81px;
+    border: 3px solid rgba(105, 97, 97, 0.367);
+}
+
+.text-block__title {
+    font-family: 'PressStart2P';
+    font-size: 96px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #0DFF00;
+}
+
+.text-block__text {
+    font-family: 'SF Pro Display';
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.two-blocks {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: #000;
+}
+
+.two-blocks__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.two-blocks__item {
+    text-align: center;
+    max-width: 500px;
+    padding: 40px;
+}
+
+.two-blocks__text {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 48px;
+}
+
+.two-blocks__text span{
+    color: #0DFF00;
+}
+
+.image-block {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/shot1.0960 1.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.image-block__content {
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.image-block__title {
+    font-family: 'PressStart2P';
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 26px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.image-block__subtitle {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 26px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.image-block__button {
+    font-family: 'PressStart2P';
+    background: #0DFF00;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.image-block__button:hover {
+    background: #0bcc00;
+    transform: scale(1.05);
+}
+
+.gallery {
+    padding: 71px 0;
+    background: #000;
+}
+
+.gallery__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.gallery__item {
+    flex: 1;
+}
+
+.gallery__image {
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.sliderLeftButton,
+.sliderRightButton {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.sliderLeftButton:hover,
+.sliderRightButton:hover {
+    transform: scale(1.1);
+}
+
+.background-block {
+    position: relative;
+    height: 2000px;
+    background-image: url('images/Group 28.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.background-block__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+}
+
+.background-block__title {
+    font-family: 'PressStart2P';
+    font-size: 64px;
+    margin-bottom: 21px;
+    color: #0DFF00;
+}
+
+.background-block__text {
+    font-family: 'SF Pro Display';
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.background-block__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 96px;
+    margin-top: 116px;
+}
+
+.background-block__item {
+    display: flex;
+    gap: 31px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.background-block__item-image {
+    flex: 0 660px 200px;
+}
+
+.background-block__item-image img {
+    height: auto;
+}
+
+.background-block__item-content {
+    flex: 1;
+    text-align: left;
+}
+
+.background-block__item-text {
+    font-family: 'SF Pro Display';
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.background-block__item-button {
+    font-family: 'SF Pro Display';
+    background: rgba(112, 112, 112, 0.205);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+
+.background-block__item-button:hover {
+    background: rgba(87, 87, 87, 0.458);
+    transform: scale(1.05);
+}
+
+.contact {
+    padding: 100px 0;
+    background: #000;
+}
+
+.contact__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact__info {
+    text-align: left;
+    flex: 1;
+}
+
+.contact__image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact__img {
+    height: auto;
+}
+
+.contact__text {
+    font-family: 'SF Pro Display';
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact__social-link{
+    color: #fff;
+    font-size: 24px;
+    font-family: 'SF Pro Display2';
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.hero__button2{
+    font-family: 'SF Pro Display';
+    background: #0DFF00;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-top: 50px;
+}
+
+.hero__button2 :hower{
+    background: #0bcc00;
+    transform: scale(1.05);
+}
+
+.final-block {
+    background: #000;
+}
+
+.final-block__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.final-block__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.final-block__info {
+    text-align: left;
+    flex: 1;
+}
+
+.final-block__image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+.final-block__image a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-block__img {
+    width: auto;
+    object-fit: contain;
+}
+
+.final-block__social-link{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'PressStart2P';
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    margin-top: -30px;
+}
+
+.final-block__social-link p {
+    white-space: nowrap;
+}
